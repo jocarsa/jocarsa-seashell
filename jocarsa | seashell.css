@@ -1,19 +1,20 @@
 /*!
- * jocarsa|seashell v1.0.0
- * Minimal CSS for the custom searchable select widget.
+ * jocarsa|seashell v1.2.0
+ * Updated CSS for structured wrapper with dropdown.
  */
 
-/* Hidden container that holds the original <select> elements */
-#jocarsa-seashell-hidden-container {
-  display: none;
-}
-
-/* Wrapper around the custom seashell widget */
+/* Wrapper around the custom seashell widget and the hidden <select> */
 .seashell-wrapper {
   position: relative;
-  width: 200px; /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
   margin: 8px 0;
   font-family: sans-serif;
+  display: inline-block;
+}
+
+/* Hidden original <select> element */
+.seashell-wrapper select {
+  display: none;
 }
 
 /* The visible input box that mimics a single-select display */

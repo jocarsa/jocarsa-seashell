@@ -1,6 +1,6 @@
 /*!
- * jocarsa|seashell v1.1.0
- * Enhanced searchable select dropdown replacement.
+ * jocarsa|seashell v1.2.1
+ * Fixed structured wrapper insertion logic.
  */
 
 (function () {
@@ -18,6 +18,7 @@
       // Create the wrapper for our custom widget
       const seashellWrapper = document.createElement('div');
       seashellWrapper.className = 'seashell-wrapper';
+      seashellWrapper.style.position = 'relative'; // Ensures dropdown positioning is tied to the wrapper
 
       // Create the visible input box
       const seashellDisplay = document.createElement('input');
@@ -71,13 +72,18 @@
         });
       });
 
-      // Insert custom widget into the DOM (before hiding the original <select>)
-      originalSelect.style.display = 'none'; // Hide the original <select>
+      // Insert the custom widget (seashellWrapper)
       originalSelect.parentNode.insertBefore(seashellWrapper, originalSelect);
 
-      // Assemble the custom widget
+      // Move the original select into the wrapper
+      seashellWrapper.appendChild(originalSelect);
+
+      // Append the custom elements to the wrapper
       seashellWrapper.appendChild(seashellDisplay);
       seashellWrapper.appendChild(seashellDropdown);
+
+      // Hide the original <select>
+      originalSelect.style.display = 'none';
     });
 
     // Close dropdown if clicked anywhere outside of a seashell display
