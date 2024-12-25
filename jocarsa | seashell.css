@@ -1,0 +1,57 @@
+/*!
+ * jocarsa|seashell v1.0.0
+ * Minimal CSS for the custom searchable select widget.
+ */
+
+/* Hidden container that holds the original <select> elements */
+#jocarsa-seashell-hidden-container {
+  display: none;
+}
+
+/* Wrapper around the custom seashell widget */
+.seashell-wrapper {
+  position: relative;
+  width: 200px; /* Adjust as needed */
+  margin: 8px 0;
+  font-family: sans-serif;
+}
+
+/* The visible input box that mimics a single-select display */
+.seashell-display {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* The dropdown container */
+.seashell-dropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  display: none; /* Initially hidden */
+  z-index: 9999;  /* Make sure it’s above other elements */
+}
+
+/* When open, show the dropdown */
+.seashell-dropdown.open {
+  display: block;
+}
+
+/* Individual dropdown items */
+.seashell-dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.seashell-dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
