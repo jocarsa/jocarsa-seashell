@@ -6,6 +6,77 @@
   <title>jocarsa|seashell Demo</title>
   <!-- Link to the seashell CSS -->
   <link rel="stylesheet" href="jocarsa | seashell.css">
+  <style>
+    /* Custom styles for the demo page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      font-size: 1.2em;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      background-color: #fdfdfd;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Style for focus states */
+    select:focus, button:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      border-color: #007bff;
+    }
+  </style>
 </head>
 <body>
   <h1>jocarsa|seashell Demo</h1>
@@ -22,8 +93,6 @@
       <option value="elderberry">Elderberry</option>
     </select>
 
-    <br><br>
-
     <label for="citySelect">Choose a city:</label>
     <select id="citySelect" data-placeholder="Select a city...">
       <option value="new-york">New York</option>
@@ -33,14 +102,11 @@
       <option value="sydney">Sydney</option>
     </select>
 
-    <br><br>
-
     <button type="submit">Submit</button>
   </form>
 
   <!-- Include the seashell JavaScript -->
   <script src="jocarsa | seashell.js"></script>
-
 </body>
 </html>
 
