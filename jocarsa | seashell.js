@@ -1,6 +1,6 @@
 /*!
  * jocarsa|seashell v1.2.1
- * Fixed structured wrapper insertion logic.
+ * Fixed structured wrapper insertion logic and added selected option rendering.
  */
 
 (function () {
@@ -54,6 +54,12 @@
 
         seashellDropdown.appendChild(dropdownItem);
       });
+
+      // Set the selected option correctly on the display input
+      const selectedOption = originalSelect.selectedOptions[0];
+      if (selectedOption) {
+        seashellDisplay.value = selectedOption.text; // Set the value to the selected option's text
+      }
 
       // Toggle dropdown on input click
       seashellDisplay.addEventListener('click', (e) => {
