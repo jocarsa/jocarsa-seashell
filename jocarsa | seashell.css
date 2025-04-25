@@ -6,7 +6,7 @@
 /* Wrapper around the custom seashell widget and the hidden <select> */
 .seashell-wrapper {
   position: relative;
-  width: 100%; /* Adjust as needed */
+
   margin: 8px 0;
   font-family: sans-serif;
   display: inline-block;
